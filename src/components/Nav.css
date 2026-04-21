@@ -1,0 +1,64 @@
+.nav-icon-row {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.brand-name {
+    text-align: left;
+    flex: 1;
+    color: black;
+    font-family: "Spectral SC";
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-categories {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    color: black;
+    justify-content: center;
+}
+
+.nav-cat-item {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-cat-item:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-cat-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: -4px;
+    left: 0;
+    background-color: black;
+    transition: transform 0.25s ease-out;
+    transform-origin: bottom center;
+}
