@@ -1,4 +1,49 @@
 
 .cat-header {
     color: black;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+}
+
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 30px;
+}
+
+.cat-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 60px;
+    background: white;
+    cursor: pointer;
+}
+
+
+.cat-card-img-wrapper {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.cat-card-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cat-item-text {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: start;
+}
+
+.cat-card-link {
+    text-decoration: none;
 }

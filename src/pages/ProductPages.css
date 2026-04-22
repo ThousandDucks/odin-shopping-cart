@@ -1,0 +1,41 @@
+
+.product-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    color: black;
+}
+
+.product-image {
+    height: 400px;
+    max-width: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.product-text {
+    padding-top: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.product-price-rating {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product-rating {
+    display: flex;
+    gap: 6px;
+}
