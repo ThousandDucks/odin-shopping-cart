@@ -1,0 +1,17 @@
+
+.quantity-container {
+    display: inline-flex;
+    gap: 25px;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    padding: 6px 16px;
+}
+
+.quantity-container button {
+    background-color: transparent;
+    border: transparent;
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+}
+

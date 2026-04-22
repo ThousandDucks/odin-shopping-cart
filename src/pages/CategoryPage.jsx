@@ -17,8 +17,8 @@ function CategoryPage() {
 
     const apiCategory = categoryMap[categoryName];
 
-    const filteredProducts = product.filter(
-        item => item.category === apiCategory
+    const filteredProducts = (product || []).filter(
+        item => item && item.category === apiCategory
     );
 
     console.log(filteredProducts)
@@ -30,8 +30,8 @@ function CategoryPage() {
             <h1 className="cat-header">{displayName}</h1>
             <div className="cat-grid">
                 {filteredProducts.map(item => (
-                    <Link className="cat-card-link" to={`/product/${item.id}`}>
-                        <div key={item.id} className="cat-card">
+                    <Link key={item.id} className="cat-card-link" to={`/product/${item.id}`}>
+                        <div className="cat-card">
                             <div className="cat-card-img-wrapper">
                                 <img className="cat-card-img" src={item.image} alt={item.title} />
                             </div>

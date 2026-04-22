@@ -28,6 +28,7 @@
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 30px;
 }
 
 .product-price {
@@ -38,4 +39,24 @@
 .product-rating {
     display: flex;
     gap: 6px;
+}
+
+.quantity-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 6px 20px;
+    border-color: transparent;
+    text-transform: uppercase;
+    font-family: "IBM Plex";
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    opacity: 0.8;
 }
