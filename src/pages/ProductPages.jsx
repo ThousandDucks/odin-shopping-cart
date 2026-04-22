@@ -41,10 +41,7 @@ function ProductPages() {
                         <div>({item.rating.count})</div>
                     </div>
                 </div>
-                <div className='quantity-cart'>
-                    <QuantitySelector></QuantitySelector>
-                    <button className='add-to-cart'>Add to cart</button>
-                </div>
+                <QuantitySelector></QuantitySelector>
             </div>
         </div>
     )

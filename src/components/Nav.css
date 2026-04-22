@@ -62,3 +62,27 @@ nav {
     transition: transform 0.25s ease-out;
     transform-origin: bottom center;
 }
+
+
+.cart-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    background: black;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid white;
+}
