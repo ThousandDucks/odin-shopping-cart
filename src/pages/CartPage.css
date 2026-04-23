@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: start;
-    gap: 20px;
+    gap: 10px;
     font-size: 10px;
 }
 
@@ -78,10 +78,24 @@
     align-items: center;
 }
 
+.cart-item-right {
+    gap: 10px;
+}
+
 .cart-item-left {
     gap: 30px;
 }
 
 .empty-cart {
     color: black;
+}
+
+.subtotal-remove {
+    display: flex;
+    gap: 10px;
+}
+
+.total-price {
+    display: flex;
+    gap: 5px;
 }

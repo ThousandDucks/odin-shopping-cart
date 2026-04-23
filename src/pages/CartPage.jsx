@@ -2,11 +2,9 @@
 import './CartPage.css'
 import { useOutletContext } from "react-router-dom";
 import QuantitySelector from "../components/QuantitySelector"
-import { useState } from "react";
 
 function CartPage() {
     const { cart, setCart } = useOutletContext();
-    const [quantity, setQuantity] = useState(1);
 
     function updateCartQuantity(id, quantity) {
         setCart(prev =>
@@ -24,7 +22,18 @@ function CartPage() {
         );
     }
 
+    function calculateSubTotal(item) {
+        return item.price * item.quantity;
+    }
+
+    function calculateTotal(cart) {
+        return cart.reduce((sum, item) => {
+            return sum + item.price * item.quantity;
+        }, 0);
+    }
+
     console.log(cart)
+
     return (
         <div>
             <h1 className="cart-header">Shopping Cart</h1>
@@ -45,21 +54,28 @@ function CartPage() {
                                 </div>
                             </div>
 
-                            <div className='cart-item-right'>
-                                <QuantitySelector
+                            <QuantitySelector
                                     item={item}
                                     quantity={item.quantity}
                                     setQuantity={(newQty) => updateCartQuantity(item.id, newQty)}
                                     showAddToCart={false}
                                     scale={0.8}
-                                />
-                                <button className='cart-remove' onClick={() => removeFromCart(item.id)}>Remove</button>
+                            />
+
+                            <div className='cart-item-right'>
+                                <div className='subtotal-remove'>
+                                    <div>£{calculateSubTotal(item)}</div>
+                                    <button className='cart-remove' onClick={() => removeFromCart(item.id)}>Remove</button>
+                                </div>
                             </div>
                         </div>
                     ))}
 
                     <div className='cart-total-checkout'>
-                        <div className='cart-total'>Total:</div>
+                        <div className='total-price'>
+                            <div className='cart-total'>Total:</div>
+                            <div>£{calculateTotal(cart)}</div>
+                        </div>
                         <button className='checkout-button'>Checkout</button>
                     </div>
                     </>
