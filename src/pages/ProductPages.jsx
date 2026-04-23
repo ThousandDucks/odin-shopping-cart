@@ -41,7 +41,7 @@ function ProductPages() {
                         <div>({item.rating.count})</div>
                     </div>
                 </div>
-                <QuantitySelector></QuantitySelector>
+                <QuantitySelector item={item}></QuantitySelector>
             </div>
         </div>
     )

@@ -1,6 +1,4 @@
 
-import HomePage from './pages/HomePage'
-import ShopPage from './pages/ShopPage'
 import Nav from './components/Nav'
 import './App.css'
 import { Outlet } from "react-router-dom";
@@ -8,13 +6,34 @@ import { useState, useEffect } from "react";
 
 function App() {
     const [product, setProduct] = useState([]);
-    const [cartQuantity, setCartQuantity] = useState(0);
+    const [cart, setCart] = useState([]);
+
+    const cartQuantity = cart.reduce((total, item) => {
+        return total + item.quantity;
+    }, 0);
+
+    function addToCart(product, quantityToAdd) {
+        setCart(prevCart => {
+            const existingItem = prevCart.find(item => item.id === product.id);
+
+            if (existingItem) {
+                return prevCart.map(item =>
+                    item.id === product.id
+                        ? { ...item, quantity: item.quantity + quantityToAdd }
+                        : item
+                );
+            }
+
+            return [...prevCart, { ...product, quantity: quantityToAdd }];
+        });
+    }
+
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             setProduct(data);
         });
     }, [])
@@ -22,7 +41,7 @@ function App() {
     return (
         <div>
             <Nav cartQuantity={cartQuantity}></Nav>
-            <Outlet context={{ product, setProduct, cartQuantity, setCartQuantity }}></Outlet>
+            <Outlet context={{ product, cart, addToCart }} />
         </div>
 
     )

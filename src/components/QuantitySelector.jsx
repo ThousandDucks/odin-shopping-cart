@@ -2,12 +2,11 @@
 import './QuantitySelector.css'
 import { useState } from 'react'
 import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
 
-function QuantitySelector() {
+function QuantitySelector({ item, showAddToCart = true, scale = 1 }) {
     const [quantity, setQuantity] = useState(1);
-    const { cartQuantity, setCartQuantity } = useOutletContext();
-
-    console.log(cartQuantity)
+    const { addToCart } = useOutletContext();
 
     function handleQuantity(type) {
         if (type === "increase") {
@@ -19,19 +18,17 @@ function QuantitySelector() {
         }
     }
 
-    function handleCart() {
-        setCartQuantity(q => q + quantity);
-    }
-
     return (
         
-        <div className='quantity-cart'>
+        <div className="quantity-cart" style={{ transform: `scale(${scale})` }}>
             <div className='quantity-container'>
                 <button onClick={() => handleQuantity("decrease")}>−</button>
                 <div>{ quantity }</div>
                 <button onClick={() => handleQuantity("increase")}>+</button>
             </div>
-            <button onClick={() => handleCart()} className='add-to-cart'>Add to cart</button>
+            {showAddToCart && (
+                <button onClick={() => addToCart(item, quantity)} className='add-to-cart'>Add to cart</button>
+            )}
         </div>
     )
 }

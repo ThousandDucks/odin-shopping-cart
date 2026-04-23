@@ -21,7 +21,7 @@ function CategoryPage() {
         item => item && item.category === apiCategory
     );
 
-    console.log(filteredProducts)
+    // console.log(filteredProducts)
 
     const displayName = categoryMap[categoryName] || categoryName
 

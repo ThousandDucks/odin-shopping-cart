@@ -2,6 +2,7 @@ import App from "./App";
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import ProductPages from "./pages/ProductPages"
+import CartPage from "./pages/CartPage"
 
 const routes = [
   {
@@ -10,7 +11,8 @@ const routes = [
     children: [
       { index: true, element: <HomePage /> },
       { path: "category/:categoryName", element: <CategoryPage /> },
-      { path: "product/:id", element: <ProductPages /> }
+      { path: "product/:id", element: <ProductPages /> },
+      { path: "cart", element: <CartPage /> }
     ]
   }
 ];

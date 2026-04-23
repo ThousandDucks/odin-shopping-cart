@@ -1,0 +1,33 @@
+
+.cart-header {
+    color: black;
+}
+
+.cart-img {
+    height: 80px;
+}
+
+.cart-item-wrapper {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    gap: 30px;
+    font-size: 10px;
+}
+
+.cart-item-details {
+    width: 200px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 30px;
+}
+
+.cart-quantity-selector {
+    transform: scale(0.6);
+}
