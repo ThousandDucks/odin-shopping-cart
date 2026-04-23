@@ -3,11 +3,12 @@ import './ProductPages.css'
 import { useOutletContext } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import QuantitySelector from "../components/QuantitySelector"
-
+import { useState } from "react";
 
 function ProductPages() {
     const { product, setProduct } = useOutletContext();
     const { id } = useParams();
+    const [quantity, setQuantity] = useState(1);
 
     if (!product || product.length === 0) {
         return <div>Loading...</div>;
@@ -41,7 +42,11 @@ function ProductPages() {
                         <div>({item.rating.count})</div>
                     </div>
                 </div>
-                <QuantitySelector item={item}></QuantitySelector>
+                <QuantitySelector
+                    item={item}
+                    quantity={quantity}
+                    setQuantity={setQuantity}
+                />
             </div>
         </div>
     )

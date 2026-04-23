@@ -1,20 +1,18 @@
 
 import './QuantitySelector.css'
-import { useState } from 'react'
 import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
 
-function QuantitySelector({ item, showAddToCart = true, scale = 1 }) {
-    const [quantity, setQuantity] = useState(1);
+function QuantitySelector({ item, quantity, setQuantity, showAddToCart = true, scale = 1 }) {
     const { addToCart } = useOutletContext();
 
     function handleQuantity(type) {
         if (type === "increase") {
-            setQuantity(q => q + 1);
+            setQuantity(quantity + 1);
         }
 
         if (type === "decrease") {
-            setQuantity(q => Math.max(1, q - 1));
+            setQuantity(Math.max(1, quantity - 1));
         }
     }
 

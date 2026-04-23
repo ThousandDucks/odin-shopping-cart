@@ -41,7 +41,7 @@ function App() {
     return (
         <div>
             <Nav cartQuantity={cartQuantity}></Nav>
-            <Outlet context={{ product, cart, addToCart }} />
+            <Outlet context={{ product, cart, setCart, addToCart }} />
         </div>
 
     )
