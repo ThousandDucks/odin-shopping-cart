@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import './App.css'
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Footer from './components/Footer'
 
 function App() {
     const [product, setProduct] = useState([]);
@@ -42,6 +43,7 @@ function App() {
         <div>
             <Nav cartQuantity={cartQuantity}></Nav>
             <Outlet context={{ product, cart, setCart, addToCart }} />
+            <Footer></Footer>
         </div>
 
     )

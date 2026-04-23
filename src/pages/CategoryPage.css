@@ -47,3 +47,7 @@
 .cat-card-link {
     text-decoration: none;
 }
+
+.cat-container {
+    padding-bottom: 30px;
+}

@@ -26,7 +26,7 @@ function CategoryPage() {
     const displayName = categoryMap[categoryName] || categoryName
 
     return (
-        <div>
+        <div className="cat-container">
             <h1 className="cat-header">{displayName}</h1>
             <div className="cat-grid">
                 {filteredProducts.map(item => (
