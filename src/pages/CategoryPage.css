@@ -3,6 +3,8 @@
     color: black;
     text-transform: capitalize;
     padding-bottom: 30px;
+    font-family: 'Ibm Plex';
+    letter-spacing: 2px;
 }
 
 .cat-grid {

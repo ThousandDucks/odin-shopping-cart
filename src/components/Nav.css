@@ -34,6 +34,7 @@ nav {
     gap: 15px;
     color: black;
     justify-content: center;
+    font-family: 'Segoe UI';
 }
 
 .nav-cat-item {

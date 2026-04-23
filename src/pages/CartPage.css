@@ -1,6 +1,8 @@
 
 .cart-header {
     color: black;
+    font-family: 'Ibm Plex';
+    letter-spacing: 2px;
 }
 
 .cart-item-wrapper {

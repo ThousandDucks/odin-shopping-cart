@@ -20,7 +20,7 @@
     
     color: white;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 200;
     text-align: center;
     font-family: 'Martel';
     text-shadow: 0 2px 10px rgba(0,0,0,0.6);
@@ -28,7 +28,35 @@
     line-height: 1.2;
 }
 
+.home-hero-subtext {
+    text-transform: none;
+    font-size: 20px;
+}
+
 main {
     display: flex;
     flex-direction: column;
+}
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    text-align: start;
+    padding: 50px 80px;
+}
+
+.home-image {
+    width: 80%;
+}
+
+.home-text {
+    color: black;
+}
+
+.home-text-header {
+    font-size: 30px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
 }
