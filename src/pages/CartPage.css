@@ -15,6 +15,8 @@
     font-size: 18px;
 }
 
+
+
 .cart-item-details {
     width: 300px;
 }
@@ -22,7 +24,7 @@
 .cart-container {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
     padding-top: 30px;
 
     width: fit-content;
@@ -30,7 +32,8 @@
 }
 
 .cart-img {
-    height: 120px;
+    max-width: 120px;
+    max-height: 200px;
 }
 
 .cart-quantity-selector {
@@ -44,11 +47,11 @@
     align-items: end;
     color: black;
 
-    padding-top: 10px;
+    padding-top: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 60px;
 
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .cart-total {
@@ -62,7 +65,7 @@
     padding: 10px 16px;
     text-transform: uppercase;
     font-family: 'Ibm Plex';
-    margin-top: 10px;
+    margin-top: 16px;
     cursor: pointer;
     font-size: 16px;
 }

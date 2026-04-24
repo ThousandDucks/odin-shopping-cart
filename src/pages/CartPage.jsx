@@ -23,13 +23,15 @@ function CartPage() {
     }
 
     function calculateSubTotal(item) {
-        return item.price * item.quantity;
+        return (item.price * item.quantity).toFixed(2);
     }
-
+    
     function calculateTotal(cart) {
-        return cart.reduce((sum, item) => {
+        const total = cart.reduce((sum, item) => {
             return sum + item.price * item.quantity;
         }, 0);
+
+        return Math.round(total * 100) / 100;
     }
 
     console.log(cart)
