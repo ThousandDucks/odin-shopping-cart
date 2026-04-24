@@ -10,16 +10,19 @@
 .cat-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
     padding: 30px;
+    row-gap: 50px;
 }
 
 .cat-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 10px 60px;
     background: white;
     cursor: pointer;
+    max-width: 200px;
+    gap: 10px;
 }
 
 
@@ -48,6 +51,8 @@
 
 .cat-card-link {
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .cat-container {

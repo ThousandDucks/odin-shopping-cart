@@ -10,7 +10,7 @@
     flex: 1;
     color: black;
     font-family: "Spectral SC";
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 600;
     letter-spacing: 2px;
     text-decoration: none;
@@ -20,20 +20,21 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
 }
 
 .nav-icon {
-    width: 30px;
+    width: 35px;
     cursor: pointer;
 }
 
 .nav-categories {
     flex: 1;
     display: flex;
-    gap: 15px;
+    gap: 30px;
     color: black;
     justify-content: center;
+    font-size: 22px;
     font-family: 'Segoe UI';
 }
 
@@ -67,17 +68,17 @@ nav {
 
 .cart-badge {
     position: absolute;
-    top: 14px;
-    right: 14px;
+    top: 23px;
+    right: 23px;
 
     background: black;
     color: white;
 
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
 
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 
     border-radius: 50%;
 

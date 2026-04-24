@@ -27,7 +27,7 @@ function ProductPages() {
             </div>
             <div className='product-details'>
                 <div className='product-text'>
-                    <div>{item.title}</div>
+                    <div className='product-title'>{item.title}</div>
                     <div>{item.description}</div>
                 </div>
                 <div className='product-price-rating'>

@@ -12,11 +12,11 @@
     align-items: center;
     text-align: start;
     gap: 10px;
-    font-size: 10px;
+    font-size: 18px;
 }
 
 .cart-item-details {
-    width: 200px;
+    width: 300px;
 }
 
 .cart-container {
@@ -30,7 +30,7 @@
 }
 
 .cart-img {
-    height: 80px;
+    height: 120px;
 }
 
 .cart-quantity-selector {
@@ -47,6 +47,8 @@
     padding-top: 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 60px;
+
+    font-size: 20px;
 }
 
 .cart-total {
@@ -57,11 +59,12 @@
     background-color: black;
     border-radius: 0;
     border: transparent;
-    padding: 7px 10px;
+    padding: 10px 16px;
     text-transform: uppercase;
     font-family: 'Ibm Plex';
-    margin-top: 5px;
+    margin-top: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .checkout-button:hover {
@@ -73,7 +76,7 @@
     background-color: transparent;
     border: transparent;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .cart-item-left, .cart-item-right {
@@ -91,6 +94,7 @@
 
 .empty-cart {
     color: black;
+    font-size: 26px;
 }
 
 .subtotal-remove {

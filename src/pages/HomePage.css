@@ -19,7 +19,7 @@
     transform: translate(-50%, -50%);
     
     color: white;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 200;
     text-align: center;
     font-family: 'Martel';
@@ -30,7 +30,7 @@
 
 .home-hero-subtext {
     text-transform: none;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 main {
@@ -53,10 +53,16 @@ main {
 
 .home-text {
     color: black;
+    max-width: 50%;
+}
+
+.home-text p {
+    font-size: 26px;
 }
 
 .home-text-header {
-    font-size: 30px;
-    padding-bottom: 10px;
+    font-size: 50px;
+    padding-bottom: 30px;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
