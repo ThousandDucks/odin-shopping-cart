@@ -2,7 +2,7 @@ import './Footer.css'
 
 function Footer() {
     return (
-        <p className='copyright'>© {new Date().getFullYear()} Blank. All rights reserved.</p>
+        <p className='copyright'>© {new Date().getFullYear()} Demo project. Not real company.</p>
     )
 }
 
