@@ -31,7 +31,7 @@ function CartPage() {
             return sum + item.price * item.quantity;
         }, 0);
 
-        return Math.round(total * 100) / 100;
+        return total.toFixed(2);
     }
 
     console.log(cart)
